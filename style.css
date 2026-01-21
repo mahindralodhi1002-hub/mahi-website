@@ -1,0 +1,60 @@
+.semester-section {
+    text-align: center;
+    padding: 20px;
+    background: #f0f6ff;
+}
+
+.sem-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #003e8f;
+}
+
+.sem-subtitle {
+    font-size: 22px;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+.sem-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.year-title {
+    font-size: 18px;
+    color: #333;
+}
+
+.semester-title {
+    background: #0066cc;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.subject-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.subject-card {
+    display: block;
+    background: #f1f7ff;
+    border: 2px solid #d0e4ff;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #004a99;
+}
+
+.subject-card:hover {
+    background: #d9ebff;
+}
