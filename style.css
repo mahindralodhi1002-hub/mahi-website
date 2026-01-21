@@ -414,3 +414,129 @@ footer {
 .download-btn:hover {
     background: #0b57d0;
 }
+/* SUBJECT HEADINGS */
+.subject-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #003366;
+}
+
+.subject-sub {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #004c99;
+}
+
+/* PAPER LIST BOX */
+.paper-box {
+    background: #ffffff;
+    padding: 18px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+/* EACH PAPER ROW */
+.paper-row {
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 16px;
+}
+
+.paper-row:last-child {
+    border-bottom: none;
+}
+
+/* DOWNLOAD BUTTON */
+.download-btn {
+    background: #0d6efd;
+    padding: 7px 16px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* NAV BUTTONS */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.nav-btn {
+    background: #0066ff;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.subject-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #003366;
+}
+
+.subject-sub {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #004c99;
+}
+
+.paper-box {
+    background: #ffffff;
+    padding: 18px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+.paper-row {
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 16px;
+}
+
+.paper-row:last-child {
+    border-bottom: none;
+}
+
+.download-btn {
+    background: #0d6efd;
+    padding: 7px 16px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.nav-btn {
+    background: #0066ff;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
