@@ -1,0 +1,83 @@
+/* BASIC */
+body{
+    margin:0;
+    font-family:Arial;
+    background:#eef4ff;
+}
+.box{
+    width:90%;
+    margin:20px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* HEADER */
+.header{
+    background:#0a4aff;
+    color:white;
+    padding:25px;
+    text-align:center;
+    font-size:32px;
+    font-weight:700;
+}
+
+/* SEMESTER LIST PAGE */
+.sem-item{
+    background:#f1f6ff;
+    padding:15px;
+    margin:12px 0;
+    border-radius:10px;
+    font-size:20px;
+    font-weight:600;
+    display:block;
+    border:2px solid #d4e3ff;
+    text-decoration:none;
+    color:#002c7a;
+}
+.sem-item:hover{
+    background:#d7e6ff;
+}
+
+/* SUBJECT LIST PAGE */
+.sub-item{
+    background:#f1f6ff;
+    padding:15px;
+    margin:12px 0;
+    border-radius:10px;
+    font-size:20px;
+    font-weight:600;
+    display:block;
+    border:2px solid #d4e3ff;
+    text-decoration:none;
+    color:#002c7a;
+}
+.sub-item:hover{
+    background:#d7e6ff;
+}
+
+/* SUBJECT PAGE */
+.item{
+    background:#f1f6ff;
+    padding:12px;
+    margin:10px 0;
+    border-radius:10px;
+    font-size:18px;
+    display:flex;
+    justify-content:space-between;
+}
+.btn{
+    background:#0a4aff;
+    color:white;
+    padding:8px 12px;
+    border-radius:6px;
+    text-decoration:none;
+}
+.btn2{
+    background:#ff9800;
+    color:white;
+    padding:8px 12px;
+    border-radius:6px;
+    text-decoration:none;
+}
