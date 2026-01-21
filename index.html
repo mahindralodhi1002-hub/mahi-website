@@ -1,82 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Mahi Engineering Paper Solution</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body{
-    margin:0;
-    padding:0;
-    font-family: Arial;
-    background:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b') center/cover no-repeat fixed;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahi Notes - B.Tech Study Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: #222;
+            background-color: #f8f8f8;
+        }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #4c6ef5, #15aabf);
+            color: white;
+        }
+        .hero-text {
+            max-width: 60%;
+        }
+        .hero-text h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background: white;
+            color: #333;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero img {
+            width: 300px;
+            border-radius: 12px;
+        }
 
-/* Transparent Card */
-.container{
-    width:90%;
-    margin:40px auto;
-    background:rgba(0,0,0,0.55);
-    padding:25px;
-    border-radius:15px;
-    text-align:center;
-    backdrop-filter: blur(10px);
-    color:white;
-}
+        .section-title {
+            text-align: center;
+            margin: 40px 0 10px;
+            font-size: 30px;
+            font-weight: bold;
+        }
 
-/* Profile Image */
-.profile-img{
-    width:130px;
-    height:130px;
-    border-radius:50%;
-    object-fit:cover;
-    border:3px solid white;
-    margin-bottom:15px;
-}
+        .branches {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 20px 40px;
+        }
 
-h1{
-    margin:10px 0;
-}
-
-.info{
-    font-size:18px;
-    line-height:28px;
-    margin-bottom:20px;
-}
-
-/* Button */
-a.button{
-    display:block;
-    width:80%;
-    margin:15px auto;
-    padding:15px;
-    background:#1e90ff;
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
-    font-size:20px;
-}
-</style>
+        .card {
+            background: white;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card h3 {
+            margin-bottom: 10px;
+        }
+        .card a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 16px;
+            margin-top: 10px;
+            background: #4c6ef5;
+            color: white;
+            border-radius: 6px;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
-
-    <!-- YOUR PHOTO HERE -->
-    <img src="YOUR_PHOTO_URL" class="profile-img">
-
-    <h1>📘 Mahi Engineering Paper Solution</h1>
-
-    <div class="info">
-        <b>Name:</b> Mahindra Lodhi <br>
-        <b>Mobile:</b> 7470407362 <br>
-        <b>Email:</b> mahindralodhi1002@gmail.com <br>
-        <b>College:</b> SISTec-R (Sagar Institute of Science & Technology)
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Learn With Your Name</h1>
+            <p>B.Tech Notes, PYQs, PDFs, Study Materials — Sab Ek Jagah!</p>
+            <a class="btn" href="#branches">Explore Branches</a>
+        </div>
+        <img src="https://via.placeholder.com/300" alt="Hero Photo">
     </div>
 
-    <a href="branches.html" class="button">📚 Select Branch</a>
+    <!-- B.TECH BRANCHES -->
+    <h2 class="section-title" id="branches">B.Tech Branches</h2>
 
-</div>
+    <div class="branches">
+        <div class="card"><h3>CSE</h3><a href="#">Open</a></div>
+        <div class="card"><h3>IT</h3><a href="#">Open</a></div>
+        <div class="card"><h3>ECE</h3><a href="#">Open</a></div>
+        <div class="card"><h3>Electrical Engineering</h3><a href="#">Open</a></div>
+        <div class="card"><h3>Mechanical Engineering</h3><a href="#">Open</a></div>
+        <div class="card"><h3>Civil Engineering</h3><a href="#">Open</a></div>
+        <div class="card"><h3>AI & DS</h3><a href="#">Open</a></div>
+        <div class="card"><h3>AI & ML</h3><a href="#">Open</a></div>
+        <div class="card"><h3>Robotics</h3><a href="#">Open</a></div>
+        <div class="card"><h3>Electronics Engg</h3><a href="#">Open</a></div>
+        <div class="card"><h3>Mechatronics</h3><a href="#">Open</a></div>
+        <div class="card"><h3>Chemical Engg</h3><a href="#">Open</a></div>
+    </div>
 
 </body>
 </html>
+
