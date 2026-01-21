@@ -1,83 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Mahi Website</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* NAVBAR */
-        .navbar {
-            width: 100%;
-            background: #000;
-            padding: 15px;
-            display: flex;
-            justify-content: left;
-            gap: 20px;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        /* Login / Signup Buttons */
-        .nav-btn {
-            margin-left: auto;
-            background: #2196F3;
-            padding: 8px 15px;
-            border-radius: 6px;
-        }
-
-        .nav-btn:hover {
-            background: #0b7dda;
-        }
-
-        h1 {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-    </style>
-</head>
-<body>
-
-    <!-- ================= NAVBAR START ================= -->
-<style>
-.navbar-main {
-    background: #0047b3;
-    padding: 10px;
-}
-
-.navbar-main a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    margin-right: 15px;
-}
-
-.navbar-main .right {
-    float: right;
-}
-</style>
-
-<div class="navbar-main">
-    <a href="index.html">Home</a>
-    <a href="branches.html">Branches</a>
-
-    <span class="right">
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
-    </span>
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8" />
+  <title>Mahi Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head><body><!-- NAVBAR --><div class="navbar-main">
+  <a href="index.html">Home</a>
+  <a href="branches.html">Branches</a>  <span class="right">
+    <a id="loginBtn" href="login.html">Login</a>
+    <a id="signupBtn" href="signup.html">Sign Up</a>
+    <a id="logoutBtn" href="#" style="display:none;">Logout</a>
+  </span>
 </div>
-<!-- ================= NAVBAR END ================= -->
+<!-- NAVBAR END --><h1>Welcome to Mahi Website</h1><script type="module">
+  import { auth, onAuthStateChanged, signOut } from "./auth.js";
 
-</body>
+  // Check login state
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      document.getElementById("logoutBtn").style.display = "inline";
+      document.getElementById("loginBtn").style.display = "none";
+      document.getElementById("signupBtn").style.display = "none";
+    } else {
+      document.getElementById("logoutBtn").style.display = "none";
+      document.getElementById("loginBtn").style.display = "inline";
+      document.getElementById("signupBtn").style.display = "inline";
+    }
+  });
+
+  // Logout
+  document.getElementById("logoutBtn").addEventListener("click", async () => {
+    await signOut(auth);
+    alert("Logged out successfully!");
+    window.location.href = "index.html";
+  });
+</script></body>
 </html>
