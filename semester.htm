@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Semester</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button onclick="history.back()">⬅ Back</button>
+
+<h2 id="branchTitle"></h2>
+<h3>Select Your Semester</h3>
+
+<div class="box">
+    <a id="sem1"></a>
+    <a id="sem2"></a>
+</div>
+
+<script>
+const p = new URLSearchParams(window.location.search);
+const branch = p.get("branch");
+
+document.getElementById("branchTitle").innerText = branch + " Branch";
+
+// create semester links
+document.getElementById("sem1").innerText = "Semester 1";
+document.getElementById("sem1").href = "subjects.html?branch=" + branch + "&semester=1";
+
+document.getElementById("sem2").innerText = "Semester 2";
+document.getElementById("sem2").href = "subjects.html?branch=" + branch + "&semester=2";
+</script>
+
+</body>
+</html>

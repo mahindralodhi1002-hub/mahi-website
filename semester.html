@@ -1,63 +1,25 @@
-<div class="nav-buttons"><a href="index.html" class="nav-btn">🏠 Home</a> <a href="javascript:history.back()" class="nav-btn">⬅ Back</a></div>
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>All Semesters – CSE</title>
+<title>Select Semester</title>
 <link rel="stylesheet" href="style.css">
 </head>
+<body><div class="nav-buttons">
+<a href="index.html" class="nav-btn">🏠 Home</a>
+<a href="javascript:history.back()" class="nav-btn">🔙 Back</a>
+</div><h2 id="branchTitle"></h2>
+<h3 class="page-title">Select Semester</h3><div class="box-list">
+<a class="box" href="subjects.html?sem=1&branch=" id="sem1">Semester 1</a>
+<a class="box" href="subjects.html?sem=2&branch=" id="sem2">Semester 2</a>
+</div><script>
+// Get branch name from URL
+const url = new URL(window.location.href);
+let branch = url.searchParams.get("branch");
 
-<body class="sem-bg">
+document.getElementById("branchTitle").innerHTML = branch + " Branch";
 
-<div class="container">
-
-    <h1 class="title">RGPV – B.Tech (CSE)</h1>
-    <h2 class="subtitle">— All Semester Names —</h2>
-
-    <div class="sem-list">
-
-        <a href="semester1.html" class="sem-box">
-            <img src="images/icon-1.png" class="sem-icon">
-            <span>Semester 1</span>
-        </a>
-
-        <a href="semester2.html" class="sem-box">
-            <img src="images/icon-2.png" class="sem-icon">
-            <span>Semester 2</span>
-        </a>
-
-        <a href="semester3.html" class="sem-box">
-            <img src="images/icon-3.png" class="sem-icon">
-            <span>Semester 3</span>
-        </a>
-
-        <a href="semester4.html" class="sem-box">
-            <img src="images/icon-4.png" class="sem-icon">
-            <span>Semester 4</span>
-        </a>
-
-        <a href="semester5.html" class="sem-box">
-            <img src="images/icon-5.png" class="sem-icon">
-            <span>Semester 5</span>
-        </a>
-
-        <a href="semester6.html" class="sem-box">
-            <img src="images/icon-6.png" class="sem-icon">
-            <span>Semester 6</span>
-        </a>
-
-        <a href="semester7.html" class="sem-box">
-            <img src="images/icon-7.png" class="sem-icon">
-            <span>Semester 7</span>
-        </a>
-
-        <a href="semester8.html" class="sem-box">
-            <img src="images/icon-8.png" class="sem-icon">
-            <span>Semester 8</span>
-        </a>
-
-    </div>
-</div>
-
-</body>
+// Add branch in semester links
+document.getElementById("sem1").href += branch;
+document.getElementById("sem2").href += branch;
+</script></body>
 </html>
