@@ -1,36 +1,66 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mahi Website</title>
-  <link rel="stylesheet" href="style.css" />
-</head><body><!-- NAVBAR --><div class="navbar-main">
-  <a href="index.html">Home</a>
-  <a href="branches.html">Branches</a>  <span class="right">
-    <a id="loginBtn" href="login.html">Login</a>
-    <a id="signupBtn" href="signup.html">Sign Up</a>
-    <a id="logoutBtn" href="#" style="display:none;">Logout</a>
-  </span>
-</div>
-<!-- NAVBAR END --><h1>Welcome to Mahi Website</h1><script type="module">
-  import { auth, onAuthStateChanged, signOut } from "./auth.js";
 
-  // Check login state
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      document.getElementById("logoutBtn").style.display = "inline";
-      document.getElementById("loginBtn").style.display = "none";
-      document.getElementById("signupBtn").style.display = "none";
-    } else {
-      document.getElementById("logoutBtn").style.display = "none";
-      document.getElementById("loginBtn").style.display = "inline";
-      document.getElementById("signupBtn").style.display = "inline";
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #eef2ff;
     }
-  });
 
-  // Logout
-  document.getElementById("logoutBtn").addEventListener("click", async () => {
-    await signOut(auth);
-    alert("Logged out successfully!");
-    window.location.href = "index.html";
-  });
-</script></body>
+    .navbar-main {
+      background: #0047b3;
+      padding: 12px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar-main a {
+      color: white;
+      text-decoration: none;
+      margin-right: 15px;
+      font-size: 17px;
+    }
+
+    .right a {
+      margin-left: 15px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0047b3;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar-main">
+    <div>
+      <a href="index.html">Home</a>
+      <a href="branches.html">Branches</a>
+    </div>
+
+    <div class="right">
+      <a id="loginBtn" href="login.html">Login</a>
+      <a id="signupBtn" href="signup.html">Sign Up</a>
+      <a id="logoutBtn" href="#" style="display:none;">Logout</a>
+    </div>
+  </div>
+  <!-- NAVBAR END -->
+
+  <h1>Welcome to Mahi Website</h1>
+
+  <!-- Firebase Login Checker Script -->
+  <script type="module" src="auth-navbar.js"></script>
+
+</body>
 </html>
