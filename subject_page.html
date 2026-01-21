@@ -5,7 +5,6 @@
 <title>Subject Page</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="nav-buttons">
@@ -13,21 +12,34 @@
     <a href="javascript:history.back()" class="nav-btn">🔙 Back</a>
 </div>
 
-<h2 id="subject-title">Loading...</h2>
+<h2 id="subject-title">Subject</h2>
 
 <h3 class="page-title">Last 5 Years Question Papers</h3>
-<ul id="pdf-list"></ul>
+<div id="pdf-list"></div>
 
 <script>
-// URL parameters get karo
-const url = new URL(window.location.href);
-let subject = url.searchParams.get("subject");
-let branch = url.searchParams.get("branch");
+// Get URL params
+const params = new URLSearchParams(window.location.search);
+const subject = params.get("subject");
+const branch = params.get("branch");
 
-// Subject name show karo
-document.getElementById("subject-title").innerText = subject;
+// Set subject name on page
+if (subject) {
+    document.getElementById("subject-title").innerText = `${branch} – ${subject}`;
+}
 
-// PDFs auto-insert hoga (Python script se)
+// Add PDF list automatically
+const years = ["2020", "2022", "2023", "2024", "2025"];
+let html = "";
+years.forEach(y => {
+    html += `
+    <div class="paper-row">
+        <span>${y} Question Paper</span>
+        <a href="pdfs/${branch}/${subject}/${subject}${y}.pdf" class="download-btn" download>Download</a>
+    </div>
+    `;
+});
+document.getElementById("pdf-list").innerHTML = html;
 </script>
 
 </body>
