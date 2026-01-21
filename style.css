@@ -268,3 +268,99 @@ footer {
     height: 100%;
     object-fit: cover;
 }
+.nav-buttons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #ffffffdd;
+    padding: 10px 18px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
+
+.nav-btn {
+    background: #005be3;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+.nav-buttons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #ffffffdd;
+    padding: 10px 18px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
+
+.nav-btn {
+    background: #005be3;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+.nav-buttons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #ffffffdd;
+    padding: 10px 18px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
+
+.nav-btn {
+    background: #005be3;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+ .nav-buttons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #ffffffdd;
+    padding: 10px 18px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
+
+.nav-btn {
+    background: #005be3;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
