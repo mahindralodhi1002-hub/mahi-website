@@ -1,66 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mahi Website</title>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #eef2ff;
-    }
-
+    body { margin:0; font-family: Arial; }
     .navbar-main {
-      background: #0047b3;
-      padding: 12px;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      background:#0047b3;
+      padding:10px;
     }
-
     .navbar-main a {
-      color: white;
-      text-decoration: none;
-      margin-right: 15px;
-      font-size: 17px;
+      color:white;
+      text-decoration:none;
+      margin-right:15px;
+      font-size:16px;
     }
-
-    .right a {
-      margin-left: 15px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #0047b3;
-      margin-top: 40px;
-    }
+    .right { float:right; }
   </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <div class="navbar-main">
-    <div>
-      <a href="index.html">Home</a>
-      <a href="branches.html">Branches</a>
-    </div>
+<div class="navbar-main">
+  <a href="index.html">Home</a>
+  <a href="branches.html">Branches</a>
 
-    <div class="right">
-      <a id="loginBtn" href="login.html">Login</a>
-      <a id="signupBtn" href="signup.html">Sign Up</a>
-      <a id="logoutBtn" href="#" style="display:none;">Logout</a>
-    </div>
-  </div>
-  <!-- NAVBAR END -->
+  <span class="right">
+    <a id="loginBtn" href="login.html">Login</a>
+    <a id="signupBtn" href="signup.html">Sign Up</a>
+    <a id="logoutBtn" href="#" style="display:none;">Logout</a>
+  </span>
+</div>
 
-  <h1>Welcome to Mahi Website</h1>
+<h2 style="padding:20px;">Welcome to Mahi Website</h2>
 
-  <!-- Firebase Login Checker Script -->
-  <script type="module" src="auth-navbar.js"></script>
-
+<script type="module" src="auth-navbar.js"></script>
 </body>
 </html>
