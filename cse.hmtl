@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Branch | Mahindra Lodhi</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6fc;
+        }
+
+        .header {
+            background: linear-gradient(to right, #0057d8, #4da3ff);
+            color: white;
+            padding: 40px 20px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header img {
+            width: 260px;
+            border-radius: 10px;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            color: #003b80;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            width: 48%;
+            background: white;
+            padding: 12px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .download-btn {
+            background: #0057d8;
+            padding: 8px 15px;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .download-btn2 {
+            background: #f69b00;
+            padding: 8px 15px;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="header">
+    <div>
+        <h1>CSE (Computer Science & Engineering)</h1>
+        <p>
+            CSE is a modern and fast-growing branch focusing on programming, 
+            software development, AI, cyber security, web development, and more.
+        </p>
+    </div>
+
+    <img src="images/cse-boy.png" alt="CSE Student Image">
+</div>
+
+<!-- ABOUT CSE -->
+<div class="box">
+    <h2>⭐ About CSE Branch</h2>
+    <p>
+        CSE focuses on programming, software development, artificial intelligence,
+        cyber security, web development, and mobile applications.
+    </p>
+</div>
+
+<!-- LAST 5 YEARS QUESTION PAPERS -->
+<div class="box">
+    <h2>📘 Last 5 Years Question Papers</h2>
+
+    <div class="row">
+        <div class="item">2021 Question Paper <a href="#" class="download-btn">Download</a></div>
+        <div class="item">2022 Question Paper <a href="#" class="download-btn">Download</a></div>
+        <div class="item">2023 Question Paper <a href="#" class="download-btn">Download</a></div>
+        <div class="item">2024 Question Paper <a href="#" class="download-btn">Download</a></div>
+        <div class="item">2025 Question Paper <a href="#" class="download-btn">Download</a></div>
+    </div>
+</div>
+
+<!-- SOLUTIONS -->
+<div class="box">
+    <h2>💡 Last 5 Years Solutions</h2>
+
+    <div class="row">
+        <div class="item">2021 Paper Solution <a href="#" class="download-btn2">Download</a></div>
+        <div class="item">2022 Paper Solution <a href="#" class="download-btn2">Download</a></div>
+        <div class="item">2023 Paper Solution <a href="#" class="download-btn2">Download</a></div>
+        <div class="item">2024 Paper Solution <a href="#" class="download-btn2">Download</a></div>
+        <div class="item">2025 Paper Solution <a href="#" class="download-btn2">Download</a></div>
+    </div>
+</div>
+
+</body>
+</html>
