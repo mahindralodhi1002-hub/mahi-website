@@ -540,3 +540,44 @@ footer {
     font-weight: 600;
 }
 
+body {
+    background: #eef3ff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #0047b3;
+}
+
+.branch-grid, ul {
+    display: grid;
+    gap: 15px;
+    padding: 20px;
+}
+
+.branch-btn, li a {
+    display: block;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    border: 1px solid #cce0ff;
+}
+
+.branch-btn:hover, li a:hover {
+    background: #d6e6ff;
+}
+
+.back, .home {
+    padding: 10px 15px;
+    background: #0066ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
