@@ -1,123 +1,237 @@
+/* =========================== */
+/* GENERAL PAGE SETTINGS */
+/* =========================== */
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #f0f4ff;
+}
+
+/* Center Text */
+h1, h2, h3 {
     text-align: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    color: #003b90;
+    margin: 10px 0;
 }
 
-.sem-bg { background-image: url('images/bg-semesters.jpg'); }
-.sub-bg { background-image: url('images/bg-subjects.jpg'); }
-.cse-bg { background-image: url('images/bg-main.jpg'); }
+/* =========================== */
+/* HEADER */
+/* =========================== */
 
-.container {
-    width: 90%;
-    margin: auto;
-    margin-top: 30px;
+.top-header {
+    background: #003b90;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
 }
 
-.title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #0d47a1;
+
+/* =========================== */
+/* HERO SECTION */
+/* =========================== */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background: linear-gradient(to right, #0057ff, #00b4ff);
+    color: white;
 }
 
-.subtitle {
-    font-size: 22px;
-    color: #004aad;
+.hero-text h1 {
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.small-title {
-    font-size: 20px;
-    margin-top: -10px;
-    color: #003f8a;
+.photo-box {
+    width: 160px;
+    height: 160px;
+    background: #d8e9ff;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.sem-list, .subject-list {
+/* =========================== */
+/* ABOUT SECTION */
+/* =========================== */
+
+.about {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.profile-card {
+    width: 120px;
+    height: 140px;
+    border-radius: 12px;
+    background: #e3eeff;
+    box-shadow: 0 0 10px #d6e6ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #d6e6ff;
+}
+
+/* =========================== */
+/* BRANCH LIST */
+/* =========================== */
+
+.branches h2 {
     margin-top: 20px;
 }
 
-.sem-box, .subject-box {
+.branch-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 20px;
+}
+
+.branch-card {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #003b90;
+    font-weight: bold;
+    box-shadow: 0 0 10px #d6e6ff;
+    transition: 0.2s;
+}
+
+.branch-card:hover {
+    background: #e7f0ff;
+    transform: scale(1.03);
+}
+
+/* =========================== */
+/* SEMESTERS PAGE */
+/* =========================== */
+
+.sem-container {
+    padding: 20px;
+}
+
+.sem-box {
+    width: 85%;
+    margin: auto;
+}
+
+.sem-item {
     display: flex;
     align-items: center;
     background: white;
     padding: 15px;
-    margin: 12px 0;
-    border-radius: 15px;
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    font-weight: 600;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-}
-
-.sem-box img, .subject-box img {
-    width: 60px;
-    margin-right: 15px;
-}
-
-.year-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    padding: 12px;
-    border-radius: 15px;
-    font-size: 18px;
-    font-weight: 600;
-    margin-top: 20px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-}
-
-.year-icon {
-    width: 70px;
-    margin-right: 15px;
-}
-
-.sem-ribbon {
-    background: #0066cc;
-    color: white;
-    font-size: 24px;
-    padding: 10px;
     border-radius: 12px;
-    margin: 20px auto;
-    width: 70%;
+    margin: 12px 0;
+    box-shadow: 0 0 10px #cfe0ff;
+    text-decoration: none;
+    color: #003b90;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-/* Subject Page */
-
-.cse-title {
-    font-size: 35px;
-    color: #0d47a1;
+.sem-item span {
+    background: #005DFF;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50%;
+    margin-right: 15px;
+    font-size: 20px;
 }
 
-.card {
-    background: white;
-    margin: 20px 0;
+/* =========================== */
+/* SEMESTER 1 SUBJECTS */
+/* =========================== */
+
+.subject-container {
     padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    text-align: left;
 }
 
-.btn-row {
+.main-card {
+    width: 90%;
+    margin: auto;
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 0 10px #d6e6ff;
+}
+
+.sub-item {
+    background: #f4faff;
+    padding: 14px;
+    border-radius: 10px;
+    margin: 12px 0;
+    box-shadow: 0 0 8px #d6e6ff;
+}
+
+.sub-item a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #003b90;
+    font-weight: bold;
+}
+
+/* =========================== */
+/* SUBJECT PAGE */
+/* =========================== */
+
+.subject-detail {
+    padding: 20px;
+}
+
+.about-box,
+.paper-box {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    box-shadow: 0 0 12px #d6e6ff;
+}
+
+.paper-box h2 {
+    color: #003b90;
+}
+
+.row {
     display: flex;
     justify-content: space-between;
+    background: #f4faff;
     padding: 12px;
-    background: #e3f2fd;
-    margin: 10px 0;
-    border-radius: 12px;
-    font-weight: 600;
-}
-
-button {
-    background: #004aad;
-    color: white;
-    border: none;
-    padding: 8px 16px;
+    margin: 8px 0;
     border-radius: 10px;
+    box-shadow: 0 0 8px #d6e6ff;
 }
 
-.sol-btn {
-    background: orange;
+.row button {
+    background: #005DFF;
+    padding: 8px 16px;
+    color: white;
+    border-radius: 8px;
+    border: none;
+}
+
+.row .sol {
+    background: #ff9c00;
+}
+
+footer {
+    text-align: center;
+    padding: 14px;
+    background: #003b90;
+    color: white;
+    margin-top: 20px;
 }
