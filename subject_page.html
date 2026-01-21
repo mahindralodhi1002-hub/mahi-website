@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Subject Page</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Subject Page</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -13,64 +13,21 @@
     <a href="javascript:history.back()" class="nav-btn">🔙 Back</a>
 </div>
 
-<h2 id="subject-title" class="page-title">About Subject</h2>
-
-<p class="desc">
-    This page contains notes, previous year papers and solutions.
-</p>
+<h2 id="subject-title">Loading...</h2>
 
 <h3 class="page-title">Last 5 Years Question Papers</h3>
-
-<div id="papers"></div>
-
-<h3 class="page-title">Last 5 Years Solutions</h3>
-
-<div id="solutions"></div>
+<ul id="pdf-list"></ul>
 
 <script>
+// URL parameters get karo
+const url = new URL(window.location.href);
+let subject = url.searchParams.get("subject");
+let branch = url.searchParams.get("branch");
 
-    // URL parameters
-    const urlParams = new URLSearchParams(window.location.search);
+// Subject name show karo
+document.getElementById("subject-title").innerText = subject;
 
-    let subject = urlParams.get("subject");  // Subject name
-    let branch = urlParams.get("branch");    // Branch
-    let sem = urlParams.get("sem");          // Semester
-
-    // Subject title change
-    if (subject) {
-        document.getElementById("subject-title").innerText = subject;
-    }
-
-    // PDF folder link
-    const folder = `pdfs/${branch}/${subject.toLowerCase()}`;
-
-    // Paper years (automatic)
-    const years = ["2021", "2022", "2023", "2024", "2025"];
-
-    // Add Papers
-    let papersHTML = "";
-    years.forEach(y => {
-        papersHTML += `
-            <div class="paper-row">
-                <span>${y} Question Paper</span>
-                <a class="download-btn" href="${folder}/${subject}${y}.pdf" download>Download</a>
-            </div>
-        `;
-    });
-    document.getElementById("papers").innerHTML = papersHTML;
-
-    // Add Solutions
-    let solHTML = "";
-    years.forEach(y => {
-        solHTML += `
-            <div class="paper-row">
-                <span>${y} Solution</span>
-                <a class="solution-btn" href="${folder}/${subject}${y}.pdf" download>Download</a>
-            </div>
-        `;
-    });
-    document.getElementById("solutions").innerHTML = solHTML;
-
+// PDFs auto-insert hoga (Python script se)
 </script>
 
 </body>
