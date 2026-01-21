@@ -1,47 +1,46 @@
-<div class="nav-buttons"><a href="index.html" class="nav-btn">🏠 Home</a> <a href="javascript:history.back()" class="nav-btn">⬅ Back</a></div>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Subject Details</title>
+<title>Subject Page</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<div class="nav-buttons"><a href="index.html" class="nav-btn">🏠 Home</a><a href="javascript:history.back()" class="nav-btn">⬅ Back</a></div>
 
-<section class="subject-detail">
+<div class="nav-buttons">
+    <a href="index.html" class="nav-btn">🏠 Home</a>
+    <a href="javascript:history.back()" class="nav-btn">🔙 Back</a>
+</div>
 
-    <h1>CSE (Computer Science & Engineering)</h1>
+<h2 id="subject-title">Subject</h2>
 
-    <div class="about-box">
-        <h2>About Subject</h2>
-        <p>This page contains notes, previous year papers and solutions.</p>
+<h3 class="page-title">Last 5 Years Question Papers</h3>
+<div id="pdf-list"></div>
+
+<script>
+// Get URL params
+const params = new URLSearchParams(window.location.search);
+const subject = params.get("subject");
+const branch = params.get("branch");
+
+// Set subject name on page
+if (subject) {
+    document.getElementById("subject-title").innerText = `${branch} – ${subject}`;
+}
+
+// Add PDF list automatically
+const years = ["2020", "2022", "2023", "2024", "2025"];
+let html = "";
+years.forEach(y => {
+    html += `
+    <div class="paper-row">
+        <span>${y} Question Paper</span>
+        <a href="pdfs/${branch}/${subject}/${subject}${y}.pdf" class="download-btn" download>Download</a>
     </div>
-
-    <div class="paper-box">
-        <h2>Last 5 Years Question Papers</h2>
-
-        <div class="row"><span>2021 Question Paper</span><button>Download</button></div>
-        <div class="row"><span>2022 Question Paper</span><button>Download</button></div>
-        <div class="row"><span>2023 Question Paper</span><button>Download</button></div>
-        <div class="row"><span>2024 Question Paper</span><button>Download</button></div>
-        <div class="row"><span>2025 Question Paper</span><button>Download</button></div>
-    </div>
-
-    <div class="paper-box">
-        <h2>Last 5 Years Solutions</h2>
-
-        <div class="row"><span>2021 Solution</span><button class="sol">Download</button></div>
-        <div class="row"><span>2022 Solution</span><button class="sol">Download</button></div>
-        <div class="row"><span>2023 Solution</span><button class="sol">Download</button></div>
-        <div class="row"><span>2024 Solution</span><button class="sol">Download</button></div>
-        <div class="row"><span>2025 Solution</span><button class="sol">Download</button></div>
-    </div>
-
-</section>
+    `;
+});
+document.getElementById("pdf-list").innerHTML = html;
+</script>
 
 </body>
 </html>
