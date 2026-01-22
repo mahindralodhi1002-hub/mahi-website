@@ -1,20 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Home | Sagar Institute of Science and Technology</title>
-<link rel="stylesheet" href="/style.css">
+<title>Sagar Institute of Science and Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f4f7fb;
+}
+header{
+  background:#0b3c91;
+  color:white;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header h2{margin:0;font-size:18px;}
+nav a{
+  color:white;
+  margin-left:15px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.container{
+  padding:20px;
+}
+.card{
+  background:white;
+  border-radius:10px;
+  padding:15px;
+  margin-bottom:20px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:15px;
+}
+button{
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  background:#0b3c91;
+  color:white;
+  font-size:15px;
+}
+button:hover{background:#092f6f;}
+.hidden{display:none;}
+footer{
+  text-align:center;
+  padding:10px;
+  color:#555;
+}
+.download{
+  background:#28a745;
+}
+</style>
 </head>
+
 <body>
-<div class="top">
-<a href="/index.html">🏠 Home</a>
+
+<header>
+  <h2>Sagar Institute of Science and Technology</h2>
+  <nav>
+    <a href="#" onclick="goHome()">Home</a>
+    <a href="#">Profile</a>
+  </nav>
+</header>
+
+<div class="container">
+
+<!-- HOME -->
+<div id="home" class="card">
+  <h3>B.Tech Branches</h3>
+  <div class="grid">
+    <button onclick="openBranch('CSE')">CSE</button>
+    <button onclick="openBranch('ECE')">ECE</button>
+    <button onclick="openBranch('EE')">EE</button>
+    <button onclick="openBranch('ME')">ME</button>
+    <button onclick="openBranch('CE')">CE</button>
+    <button onclick="openBranch('IT')">IT</button>
+    <button onclick="openBranch('AIML')">AIML</button>
+    <button onclick="openBranch('AIDS')">AIDS</button>
+    <button onclick="openBranch('CHEMICAL')">CHEMICAL</button>
+  </div>
 </div>
 
-<div class="card">
-<h1>Sagar Institute of Science and Technology</h1>
-<p>Learn with Mahindra Lodhi</p>
-<h2>B.Tech Branches</h2>
-<p><a class="btn" href="/branches/CSE.html">CSE</a></p><p><a class="btn" href="/branches/ECE.html">ECE</a></p><p><a class="btn" href="/branches/EE.html">EE</a></p><p><a class="btn" href="/branches/ME.html">ME</a></p><p><a class="btn" href="/branches/CE.html">CE</a></p><p><a class="btn" href="/branches/IT.html">IT</a></p><p><a class="btn" href="/branches/AIML.html">AIML</a></p><p><a class="btn" href="/branches/AIDS.html">AIDS</a></p><p><a class="btn" href="/branches/CHEMICAL.html">CHEMICAL</a></p></div>
-<footer>© 2026 Mahindra Lodhi</footer>
+<!-- SEMESTER -->
+<div id="semester" class="card hidden">
+  <h3 id="branchTitle"></h3>
+  <div class="grid">
+    <button onclick="openSubject()">Semester 1</button>
+    <button onclick="openSubject()">Semester 2</button>
+    <button onclick="openSubject()">Semester 3</button>
+    <button onclick="openSubject()">Semester 4</button>
+    <button onclick="openSubject()">Semester 5</button>
+    <button onclick="openSubject()">Semester 6</button>
+    <button onclick="openSubject()">Semester 7</button>
+    <button onclick="openSubject()">Semester 8</button>
+  </div>
+</div>
+
+<!-- SUBJECT -->
+<div id="subject" class="card hidden">
+  <h3>About Subject</h3>
+  <p>This page contains notes, previous year papers and solutions.</p>
+
+  <h4>Last 5 Years Question Papers</h4>
+  <button class="download">2021 Download</button>
+  <button class="download">2022 Download</button>
+  <button class="download">2023 Download</button>
+  <button class="download">2024 Download</button>
+  <button class="download">2025 Download</button>
+
+  <h4>Last 5 Years Solutions</h4>
+  <button class="download">2021 Solution</button>
+  <button class="download">2022 Solution</button>
+  <button class="download">2023 Solution</button>
+  <button class="download">2024 Solution</button>
+  <button class="download">2025 Solution</button>
+</div>
+
+</div>
+
+<footer>
+© 2026 Mahindra Lodhi
+</footer>
+
+<script>
+function goHome(){
+  home.style.display="block";
+  semester.style.display="none";
+  subject.style.display="none";
+}
+function openBranch(branch){
+  home.style.display="none";
+  semester.style.display="block";
+  subject.style.display="none";
+  branchTitle.innerText = branch + " Branch";
+}
+function openSubject(){
+  semester.style.display="none";
+  subject.style.display="block";
+}
+</script>
+
 </body>
 </html>
