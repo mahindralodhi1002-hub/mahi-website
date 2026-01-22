@@ -35,7 +35,7 @@ const box = document.getElementById("list");
 
 subjects.forEach(sub => {
   const a = document.createElement("a");
-  a.href = "subject_page.html?subject=" + sub;
+  a.href = `subject_page.html?branch=${b}&sem=${s}&subject=${sub}`;
   a.innerText = sub;
   box.appendChild(a);
 });
