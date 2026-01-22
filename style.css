@@ -1,160 +1,103 @@
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-/* ===== BODY ===== */
 body {
-  font-family: Arial, Helvetica, sans-serif;
   background: #f4f6f9;
-  color: #222;
+  color: #333;
 }
 
 /* ===== NAVBAR ===== */
 .nav {
+  background: linear-gradient(90deg, #0d47a1, #1565c0);
+  color: #fff;
+  padding: 14px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  background: #123c69;
 }
 
-.nav .logo {
-  font-size: 20px;
+.logo {
   font-weight: bold;
-  color: #fff;
+  font-size: 18px;
 }
 
 .nav a {
   color: #fff;
   text-decoration: none;
   margin-left: 15px;
-  font-weight: 500;
+  font-size: 14px;
 }
 
-.nav a:hover {
-  text-decoration: underline;
+/* ===== PAGE TITLE ===== */
+h1, h2 {
+  text-align: center;
+  margin: 20px 0;
+  color: #0d47a1;
 }
 
-/* ===== HERO SECTION (HOME) ===== */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 8%;
-  background: linear-gradient(120deg, #1e3c72, #2a5298);
-  color: #fff;
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 10px;
 }
 
-.hero-text {
-  max-width: 520px;
-}
-
-.hero-text h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-}
-
-.hero-text span {
-  color: #f9a825;
-}
-
-.hero-text p {
-  font-size: 17px;
-  line-height: 1.6;
-  margin-bottom: 25px;
-}
-
-.hero-img img {
-  width: 240px;
-  border-radius: 14px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-}
-
-/* ===== BUTTON ===== */
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #f9a825;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #ffd54f;
-}
-
-/* ===== COMMON GRID (BRANCH / SEM / SUBJECT) ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 18px;
-  padding: 40px 8%;
-}
-
-.grid a {
+/* ===== CARD ===== */
+.card {
   background: #fff;
-  padding: 16px;
-  text-align: center;
-  text-decoration: none;
-  color: #123c69;
-  font-weight: bold;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+/* ===== LIST ===== */
+ul {
+  list-style: none;
+}
+
+li {
+  background: #f8fbff;
+  margin: 10px 0;
+  padding: 14px;
   border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  transition: 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.grid a:hover {
-  background: #123c69;
+/* ===== BUTTONS ===== */
+a.download {
+  background: #1976d2;
   color: #fff;
-  transform: translateY(-4px);
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
 }
 
-/* ===== PAGE TITLES ===== */
-h2 {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 30px;
-  color: #123c69;
+a.download:hover {
+  background: #0d47a1;
 }
 
-/* ===== DOWNLOAD PAGE ===== */
-.download-box {
-  text-align: center;
-  padding: 40px;
+/* ===== SOLUTION BUTTON ===== */
+a.solution {
+  background: #fb8c00;
 }
 
-.download-box a {
-  display: inline-block;
-  margin: 10px;
+a.solution:hover {
+  background: #ef6c00;
 }
 
 /* ===== FOOTER ===== */
 footer {
-  margin-top: 40px;
-  padding: 15px;
   text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 13px;
   color: #555;
-  font-size: 14px;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-img {
-    margin-top: 25px;
-  }
-
-  .hero-text h1 {
-    font-size: 34px;
-  }
 }
