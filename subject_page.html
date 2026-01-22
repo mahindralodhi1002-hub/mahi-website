@@ -15,25 +15,45 @@
 
 <h2>Question Papers</h2>
 <ul>
-  <li>2021 <a href="#">Download</a></li>
-  <li>2022 <a href="#">Download</a></li>
-  <li>2023 <a href="#">Download</a></li>
-  <li>2024 <a href="#">Download</a></li>
-  <li>2025 <a href="#">Download</a></li>
-</ul>
+  <h2>Last 5 Years Question Papers</h2>
+<ul id="qp"></ul>
 
-<h2>Solutions</h2>
-<ul>
-  <li>2021 <a href="#">Download</a></li>
-  <li>2022 <a href="#">Download</a></li>
-  <li>2023 <a href="#">Download</a></li>
-  <li>2024 <a href="#">Download</a></li>
-  <li>2025 <a href="#">Download</a></li>
-</ul>
+<h2>Last 5 Years Solutions</h2>
+<ul id="sol"></ul>
 
 <script>
-  const p = new URLSearchParams(window.location.search);
-  document.getElementById("sub").innerText = p.get("subject");
+const p = new URLSearchParams(window.location.search);
+const branch = p.get("branch");
+const sem = p.get("sem");
+const subject = p.get("subject");
+
+document.getElementById("sub").innerText =
+  branch + " - Semester " + sem + " - " + subject;
+
+// YEARS
+const years = [2025, 2024, 2023, 2022, 2020];
+
+// Question Papers
+const qpBox = document.getElementById("qp");
+years.forEach(y => {
+  const li = document.createElement("li");
+  li.innerHTML = `${y} Question Paper 
+    <a href="pdfs/${branch}/sem${sem}/${subject}/${subject}${y}.pdf" download>
+      Download
+    </a>`;
+  qpBox.appendChild(li);
+});
+
+// Solutions
+const solBox = document.getElementById("sol");
+years.forEach(y => {
+  const li = document.createElement("li");
+  li.innerHTML = `${y} Solution 
+    <a href="pdfs/${branch}/sem${sem}/${subject}/${subject}${y}_solution.pdf" download>
+      Download
+    </a>`;
+  solBox.appendChild(li);
+});
 </script>
 
 </body>
