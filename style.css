@@ -7,109 +7,22 @@
 
 body {
   background: #f4f6f9;
-  color: #333;
+  color: #222;
 }
 
-/* ===== NAVBAR ===== */
-.nav {
-  background: linear-gradient(90deg, #0d47a1, #1565c0);
-  color: #fff;
-  padding: 14px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 15px;
-  font-size: 14px;
-}
-
-/* ===== PAGE TITLE ===== */
-h1, h2 {
-  text-align: center;
-  margin: 20px 0;
-  color: #0d47a1;
-}
-
-/* ===== CONTAINER ===== */
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 10px;
-}
-
-/* ===== CARD ===== */
-.card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-}
-
-/* ===== LIST ===== */
-ul {
-  list-style: none;
-}
-
-li {
-  background: #f8fbff;
-  margin: 10px 0;
-  padding: 14px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* ===== BUTTONS ===== */
-a.download {
-  background: #1976d2;
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 13px;
-}
-
-a.download:hover {
-  background: #0d47a1;
-}
-
-/* ===== SOLUTION BUTTON ===== */
-a.solution {
-  background: #fb8c00;
-}
-
-a.solution:hover {
-  background: #ef6c00;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-  font-size: 13px;
-  color: #555;
-}
-/* ===== SUBJECT PAGE DESIGN ===== */
-
+/* ===== TOP BAR ===== */
 .topbar {
-  background: linear-gradient(90deg, #0d47a1, #1565c0);
+  background: #0d47a1;
   color: #fff;
   padding: 14px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.topbar .logo {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .topbar a {
@@ -119,51 +32,50 @@ footer {
   font-size: 14px;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 18px;
-}
-
+/* ===== CONTAINER ===== */
 .container {
-  max-width: 900px;
-  margin: 25px auto;
+  max-width: 1000px;
+  margin: 30px auto;
   padding: 0 15px;
 }
 
+/* ===== TITLES ===== */
 .page-title {
   text-align: center;
+  margin-bottom: 25px;
   color: #0d47a1;
-  margin-bottom: 20px;
 }
 
+/* ===== CARDS ===== */
 .card {
   background: #fff;
-  border-radius: 10px;
   padding: 20px;
+  border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .card h3 {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   color: #0d47a1;
 }
 
+/* ===== LIST ===== */
 .list {
   list-style: none;
-  padding: 0;
 }
 
 .list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #f1f6ff;
+  background: #eef3ff;
   padding: 12px 15px;
   margin-bottom: 10px;
   border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/* ===== BUTTONS ===== */
 .btn {
   padding: 6px 14px;
   border-radius: 6px;
@@ -180,9 +92,32 @@ footer {
   background: #f9a825;
 }
 
+.btn.gray {
+  background: #546e7a;
+}
+
+/* ===== GRID (Home / Branch / Semester) ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.grid a {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 25px 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #0d47a1;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ===== FOOTER ===== */
 .footer {
   text-align: center;
-  margin: 30px 0;
+  margin: 40px 0 20px;
   font-size: 13px;
   color: #555;
 }
