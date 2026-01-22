@@ -8,8 +8,11 @@
 <body>
 
 <header class="topbar">
-  <a href="index.html" class="btn home">🏠 Home</a>
-  <a href="javascript:history.back()" class="btn back">⬅ Back</a>
+  <div class="logo">EDUCATION</div>
+  <div>
+    <a href="javascript:history.back()" class="btn back">← Back</a>
+    <a href="index.html" class="btn home">🏠 Home</a>
+  </div>
 </header>
 
 <div class="container">
@@ -38,39 +41,46 @@
 </footer>
 
 <script>
-const p = new URLSearchParams(window.location.search);
-const branch = p.get("branch");
-const sem = p.get("sem");
-const subject = p.get("subject");
+  const p = new URLSearchParams(window.location.search);
+  const branch = p.get("branch");
+  const sem = p.get("sem");
+  const subject = p.get("subject");
 
-document.getElementById("subTitle").innerText =
-  `${branch} - Semester ${sem} - ${subject}`;
+  // safety check (null issue fix)
+  if (!branch || !sem || !subject) {
+    document.getElementById("subTitle").innerText = "Invalid Page";
+  } else {
+    document.getElementById("subTitle").innerText =
+      `${branch} - Semester ${sem} - ${subject}`;
+  }
 
-const years = [2021, 2022, 2023, 2024, 2025];
+  const years = [2025, 2024, 2023, 2022, 2020];
 
-// Question Papers
-const qpBox = document.getElementById("qp");
-years.forEach(y => {
-  const li = document.createElement("li");
-  li.innerHTML = `
-    <span>${y} Question Paper</span>
-    <a class="btn download blue"
-       href="pdfs/${branch}/sem${sem}/${subject}/${subject}${y}.pdf"
-       download>Download</a>`;
-  qpBox.appendChild(li);
-});
+  // Question Papers
+  const qpBox = document.getElementById("qp");
+  years.forEach(y => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <span>${y} Question Paper</span>
+      <a class="download-btn"
+         href="pdfs/${branch}/sem${sem}/${subject}/${subject}${y}.pdf"
+         download>Download</a>
+    `;
+    qpBox.appendChild(li);
+  });
 
-// Solutions
-const solBox = document.getElementById("sol");
-years.forEach(y => {
-  const li = document.createElement("li");
-  li.innerHTML = `
-    <span>${y} Solution</span>
-    <a class="btn download orange"
-       href="pdfs/${branch}/sem${sem}/${subject}/${subject}${y}_solution.pdf"
-       download>Download</a>`;
-  solBox.appendChild(li);
-});
+  // Solutions
+  const solBox = document.getElementById("sol");
+  years.forEach(y => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <span>${y} Solution</span>
+      <a class="download-btn orange"
+         href="pdfs/${branch}/sem${sem}/${subject}/${subject}${y}_solution.pdf"
+         download>Download</a>
+    `;
+    solBox.appendChild(li);
+  });
 </script>
 
 </body>
