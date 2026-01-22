@@ -8,31 +8,26 @@
 
 <div class="nav">
   <div class="logo">EDUCATION</div>
-  <a href="branches.html">Back</a>
 </div>
 
-<h2 id="title"></h2>
+<div class="container">
+  <h1 id="title"></h1>
 
-<div class="grid">
-  <a id="s1">Semester 1</a>
-  <a id="s2">Semester 2</a>
-  <a id="s3">Semester 3</a>
-  <a id="s4">Semester 4</a>
+  <div class="cards">
+    <div class="card"><a id="s1">Semester 1</a></div>
+    <div class="card"><a id="s2">Semester 2</a></div>
+  </div>
 </div>
-
-<script>
-const p = new URLSearchParams(location.search);
-const branch = p.get("branch");
-
-document.getElementById("title").innerText =
-  branch + " - Select Semester";
-
-for (let i = 1; i <= 4; i++) {
-  document.getElementById("s" + i).href =
-    "subjects.html?branch=" + branch + "&sem=" + i;
-}
-</script>
 
 <footer>© 2026 Mahindra Lodhi</footer>
+
+<script>
+const branch = new URLSearchParams(window.location.search).get("branch");
+document.getElementById("title").innerText = branch + " - Select Semester";
+
+document.getElementById("s1").href = "subjects.html?branch="+branch+"&sem=1";
+document.getElementById("s2").href = "subjects.html?branch="+branch+"&sem=2";
+</script>
+
 </body>
 </html>

@@ -1,45 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Subject</title>
+  <title>Subject PDFs</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="topbar">
-  <span class="logo">EDUCATION</span>
-  <div class="nav">
-    <a href="index.html">Home</a>
-    <a href="javascript:history.back()">Back</a>
-  </div>
-</header>
-
-<div class="container">
-
-  <h1 id="title" class="page-title">Subject</h1>
-
-  <div class="card">
-    <h3>About Subject</h3>
-    <p>This page contains notes, previous year papers and solutions.</p>
-  </div>
-
-  <div class="card">
-    <h3>Last 5 Years Question Papers</h3>
-    <ul id="qp" class="list"></ul>
-  </div>
-
-  <div class="card">
-    <h3>Last 5 Years Solutions</h3>
-    <ul id="sol" class="list"></ul>
-  </div>
-
+<div class="nav">
+  <div class="logo">EDUCATION</div>
 </div>
 
-<footer class="footer">
-  © 2026 Mahindra Lodhi
-</footer>
+<div class="container">
+  <h1 id="title"></h1>
+  <ul id="list"></ul>
+</div>
+
+<footer>© 2026 Mahindra Lodhi</footer>
 
 <script>
 const p = new URLSearchParams(window.location.search);
@@ -47,36 +23,22 @@ const branch = p.get("branch");
 const sem = p.get("sem");
 const subject = p.get("subject");
 
-if (!branch || !sem || !subject) {
-  document.getElementById("title").innerText = "Invalid Subject";
-} else {
-  document.getElementById("title").innerText =
-    `${branch} - Semester ${sem} - ${subject}`;
-}
+document.getElementById("title").innerText =
+  `${branch} - Semester ${sem} - ${subject}`;
 
-const years = [2025, 2024, 2023, 2022, 2020];
-
-const qpBox = document.getElementById("qp");
-const solBox = document.getElementById("sol");
+const years = [2025, 2024, 2023];
 
 years.forEach(y => {
-  const qp = document.createElement("li");
-  qp.innerHTML = `
-    <span>${y} Question Paper</span>
-    <a class="btn blue" href="pdfs/${branch}/sem${sem}/${subject}/${subject}${y}.pdf" download>
-      Download
-    </a>`;
-  qpBox.appendChild(qp);
-
-  const sol = document.createElement("li");
-  sol.innerHTML = `
-    <span>${y} Solution</span>
-    <a class="btn orange" href="pdfs/${branch}/sem${sem}/${subject}/${subject}${y}_solution.pdf" download>
-      Download
-    </a>`;
-  solBox.appendChild(sol);
+  const li = document.createElement("li");
+  li.innerHTML = `${y}
+   <a href="pdfs/${branch}/sem${sem}/${subject}/${subject}${y}.pdf" download>
+    Download
+   </a>`;
+  document.getElementById("list").appendChild(li);
 });
 </script>
 
 </body>
 </html>
+
+
