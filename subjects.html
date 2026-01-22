@@ -1,40 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Subjects</title>
+  <meta charset="UTF-8">
+  <title>Select Subject</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- NAVBAR -->
 <div class="nav">
   <div class="logo">EDUCATION</div>
-</div>
-
-<div class="container">
-  <h1>Select Subject</h1>
-
-  <div class="cards">
-    <div class="card"><a id="phy">Physics</a></div>
-    <div class="card"><a id="math">Mathematics</a></div>
-    <div class="card"><a id="bee">BEE</a></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="javascript:history.back()">Back</a>
   </div>
 </div>
 
-<footer>© 2026 Mahindra Lodhi</footer>
+<div class="container">
+  <h1 id="title">Select Subject</h1>
+
+  <div class="cards">
+    <div class="card"><a id="sub-math">Math</a></div>
+    <div class="card"><a id="sub-bme">BME</a></div>
+    <div class="card"><a id="sub-phy">Physics</a></div>
+    <div class="card"><a id="sub-bce">BCE</a></div>
+    <div class="card"><a id="sub-bcem">BCE'M</a></div>
+  </div>
+</div>
+
+<footer>
+  © 2026 Mahindra Lodhi
+</footer>
 
 <script>
-const p = new URLSearchParams(window.location.search);
-const branch = p.get("branch");
-const sem = p.get("sem");
+  const p = new URLSearchParams(window.location.search);
+  const branch = p.get("branch");
+  const sem = p.get("sem");
 
-document.getElementById("phy").href =
-  `subject_page.html?branch=${branch}&sem=${sem}&subject=Physics`;
+  // Title set
+  if (branch && sem) {
+    document.getElementById("title").innerText =
+      branch + " - Semester " + sem;
+  }
 
-document.getElementById("math").href =
-  `subject_page.html?branch=${branch}&sem=${sem}&subject=Mathematics`;
+  // Subject links
+  document.getElementById("sub-math").href =
+    `subject_page.html?branch=${branch}&sem=${sem}&subject=Math`;
 
-document.getElementById("bee").href =
-  `subject_page.html?branch=${branch}&sem=${sem}&subject=BEE`;
+  document.getElementById("sub-bme").href =
+    `subject_page.html?branch=${branch}&sem=${sem}&subject=BME`;
+
+  document.getElementById("sub-phy").href =
+    `subject_page.html?branch=${branch}&sem=${sem}&subject=Physics`;
+
+  document.getElementById("sub-bce").href =
+    `subject_page.html?branch=${branch}&sem=${sem}&subject=BCE`;
+
+  document.getElementById("sub-bcem").href =
+    `subject_page.html?branch=${branch}&sem=${sem}&subject=BCE'M`;
 </script>
 
 </body>
