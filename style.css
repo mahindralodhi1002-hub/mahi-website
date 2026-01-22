@@ -7,222 +7,112 @@
 
 body {
   background: #f5f7fb;
-  color: #222;
 }
 
-body.dark {
-  background: #121212;
-  color: #fff;
-}
-
-/* Navbar */
+/* NAVBAR */
 .navbar {
-  background: #0d47a1;
-  color: white;
-  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 16px 8%;
+  background: #0f2a44;
 }
 
-.navbar a {
+.navbar .logo {
   color: white;
-  margin-right: 15px;
-  text-decoration: none;
-}
-
-.navbar button {
-  background: none;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-/* Main */
-.container {
-  max-width: 1100px;
-  margin: 40px auto;
-  text-align: center;
-}
-
-.container h1 {
-  margin-bottom: 30px;
-  color: #0d47a1;
-}
-
-/* Grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: #0d47a1;
   font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-size: 20px;
 }
 
-body.dark .card {
-  background: #1f1f1f;
-  color: #fff;
-}
-
-/* Footer */
-footer {
-  margin-top: 50px;
-  text-align: center;
-  color: gray;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f7fb;
-}
-
-.navbar {
-  background: #0b3c78;
-  color: white;
-  padding: 15px 40px;
+.navbar ul {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 20px;
+  list-style: none;
 }
 
 .navbar a {
   color: white;
-  margin-left: 20px;
   text-decoration: none;
+  font-weight: 500;
 }
 
+/* HERO */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px;
-  background: linear-gradient(to right, #2b5fa1, #1d3f6e);
+  padding: 60px 8%;
+  background: linear-gradient(120deg, #1e40af, #2563eb);
   color: white;
 }
 
+.hero-text {
+  max-width: 520px;
+}
+
 .hero-text h1 {
-  font-size: 44px;
+  font-size: 40px;
+  margin-bottom: 15px;
 }
 
 .hero-text span {
-  color: #ffd24d;
+  color: #facc15;
+}
+
+.hero-text p {
+  margin-bottom: 25px;
+  line-height: 1.6;
 }
 
 .btn {
-  display: inline-block;
-  margin-top: 20px;
-  background: #ffd24d;
-  padding: 12px 20px;
+  background: #facc15;
+  padding: 12px 22px;
+  text-decoration: none;
   color: black;
   border-radius: 6px;
-  text-decoration: none;
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 8%;
-  gap: 40px;
-}
-
-.hero-text {
-  max-width: 520px;
-}
-
-.hero-text h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-}
-
-.hero-text span {
-  color: #1e40af;
-}
-
-.hero-text p {
-  font-size: 18px;
-  color: #444;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background: #1e40af;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 8%;
-  gap: 40px;
-}
-
-.hero-text {
-  max-width: 520px;
-}
-
-.hero-text h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-}
-
-.hero-text span {
-  color: #1e40af;
-}
-
-.hero-text p {
-  font-size: 18px;
-  color: #444;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background: #1e40af;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
+  font-weight: bold;
 }
 
 .hero-img img {
-  width: 320px;
-  max-width: 90%;
-  border-radius: 18px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-  object-fit: cover;
-}
-.features {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 40px;
+  width: 260px;
+  border-radius: 16px;
 }
 
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
+/* BRANCHES */
+.branches-home {
+  padding: 60px 8%;
   text-align: center;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
 
+.branches-home h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.branch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.branch-grid a {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1e40af;
+  font-weight: bold;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.branch-grid a:hover {
+  background: #1e40af;
+  color: white;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  color: gray;
+  color: #555;
 }
