@@ -1,66 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Subject</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<a href="subjects.html">⬅ Back</a> |
-<a href="index.html">🏠 Home</a>
+<header class="topbar">
+  <a href="index.html" class="btn home">🏠 Home</a>
+  <a href="javascript:history.back()" class="btn back">⬅ Back</a>
+</header>
 
-<h1 id="sub">Subject</h1>
+<div class="container">
 
-<h2>Last 5 Years Question Papers</h2>
-<ul id="qp"></ul>
+  <h1 id="subTitle" class="page-title">Subject</h1>
 
-<h2>Last 5 Years Solutions</h2>
-<ul id="sol"></ul>
+  <div class="card">
+    <h3>About Subject</h3>
+    <p>This page contains notes, previous year papers and solutions.</p>
+  </div>
+
+  <div class="card">
+    <h3>Last 5 Years Question Papers</h3>
+    <ul id="qp" class="list"></ul>
+  </div>
+
+  <div class="card">
+    <h3>Last 5 Years Solutions</h3>
+    <ul id="sol" class="list"></ul>
+  </div>
+
+</div>
+
+<footer class="footer">
+  © 2026 Mahindra Lodhi
+</footer>
 
 <script>
-/* ===== GET URL DATA ===== */
 const p = new URLSearchParams(window.location.search);
 const branch = p.get("branch");
 const sem = p.get("sem");
 const subject = p.get("subject");
 
-/* ===== SET TITLE ===== */
-document.getElementById("sub").innerText =
+document.getElementById("subTitle").innerText =
   `${branch} - Semester ${sem} - ${subject}`;
 
-/* ===== YEARS ===== */
-const years = [2025, 2024, 2023, 2022, 2020];
+const years = [2021, 2022, 2023, 2024, 2025];
 
-/* ===== QUESTION PAPERS ===== */
+// Question Papers
 const qpBox = document.getElementById("qp");
-
 years.forEach(y => {
   const li = document.createElement("li");
   li.innerHTML = `
-    ${y} Question Paper
-    <a href="pdfs/${branch}/sem${sem}/${subject}/${subject}${y}.pdf" download>
-      Download
-    </a>
-  `;
+    <span>${y} Question Paper</span>
+    <a class="btn download blue"
+       href="pdfs/${branch}/sem${sem}/${subject}/${subject}${y}.pdf"
+       download>Download</a>`;
   qpBox.appendChild(li);
 });
 
-/* ===== SOLUTIONS (FUTURE READY) ===== */
+// Solutions
 const solBox = document.getElementById("sol");
-
 years.forEach(y => {
   const li = document.createElement("li");
   li.innerHTML = `
-    ${y} Solution
-    <a href="pdfs/${branch}/sem${sem}/${subject}/${subject}${y}_solution.pdf" download>
-      Download
-    </a>
-  `;
+    <span>${y} Solution</span>
+    <a class="btn download orange"
+       href="pdfs/${branch}/sem${sem}/${subject}/${subject}${y}_solution.pdf"
+       download>Download</a>`;
   solBox.appendChild(li);
 });
 </script>
-
-<footer>© 2026 Mahindra Lodhi</footer>
 
 </body>
 </html>
