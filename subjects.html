@@ -1,46 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Subjects</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
+<header class="navbar">
   <a href="index.html">Home</a>
+  <a href="branches.html">Branches</a>
 </header>
 
 <div class="container">
   <h1 id="title"></h1>
 
-  <div class="card-grid">
-    <script>
-      const p = new URLSearchParams(location.search);
-      const b = p.get("branch");
-      const s = p.get("sem");
-
-      document.getElementById("title").innerText =
-        b + " Semester " + s;
-
-      const subjects = [
-        "Mathematics-1",
-        "Physics",
-        "Basic Electrical",
-        "Engineering Graphics",
-        "Communication Skills"
-      ];
-
-      subjects.forEach(sub => {
-        document.write(
-          `<div class="card">
-            <a href="subject_page.html?subject=${sub}">${sub}</a>
-           </div>`
-        );
-      });
-    </script>
-  </div>
+  <div class="card-grid" id="subjectList"></div>
 </div>
 
-<footer>© 2026 Mahindra Lodhi</footer>
+<footer>
+  © 2026 Mahindra Lodhi
+</footer>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const branch = params.get("branch");
+  const sem = params.get("sem");
+
+  document.getElementById("title").innerText =
+    branch + " - Semester " + sem;
+
+  const subjects = [
+    "Mathematics-1",
+    "Physics",
+    "Basic Electrical",
+    "Engineering Graphics",
+    "Communication Skills"
+  ];
+
+  const box = document.getElementById("subjectList");
+
+  subjects.forEach(sub => {
+    const div = document.createElement("div");
+    div.className = "card";
+
+    const a = document.createElement("a");
+    a.href = `subject_page.html?subject=${sub}`;
+    a.innerText = sub;
+
+    div.appendChild(a);
+    box.appendChild(div);
+  });
+</script>
+
 </body>
 </html>
