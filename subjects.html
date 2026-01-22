@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Subjects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html">Home</a>
+</header>
+
+<div class="container">
+  <h1 id="title"></h1>
+
+  <div class="card-grid">
+    <script>
+      const p = new URLSearchParams(location.search);
+      const b = p.get("branch");
+      const s = p.get("sem");
+
+      document.getElementById("title").innerText =
+        b + " Semester " + s;
+
+      const subjects = [
+        "Mathematics-1",
+        "Physics",
+        "Basic Electrical",
+        "Engineering Graphics",
+        "Communication Skills"
+      ];
+
+      subjects.forEach(sub => {
+        document.write(
+          `<div class="card">
+            <a href="subject_page.html?subject=${sub}">${sub}</a>
+           </div>`
+        );
+      });
+    </script>
+  </div>
+</div>
+
+<footer>© 2026 Mahindra Lodhi</footer>
+</body>
+</html>
