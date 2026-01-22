@@ -127,11 +127,85 @@ body {
   text-decoration: none;
 }
 
-.hero-img img {
-  width: 280px;
-  border-radius: 12px;
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  gap: 40px;
 }
 
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero-text span {
+  color: #1e40af;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #444;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #1e40af;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  gap: 40px;
+}
+
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero-text span {
+  color: #1e40af;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #444;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #1e40af;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.hero-img img {
+  width: 320px;
+  max-width: 90%;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  object-fit: cover;
+}
 .features {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
