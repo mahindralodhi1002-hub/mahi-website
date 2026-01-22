@@ -5,43 +5,43 @@
   <title>Sagar Institute of Science and Technology</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header class="navbar">
-  <h2>Sagar Institute of Science and Technology</h2>
+  <div class="logo">EDUCATION</div>
   <nav>
     <a href="index.html">Home</a>
-    <a href="#">Profile</a>
-    <button id="darkBtn">🌙</button>
+    <a href="#">About</a>
+    <a href="branches.html">Courses</a>
+    <a href="#">Contact Me</a>
   </nav>
 </header>
 
-<main class="container">
-  <h1>B.Tech Branches</h1>
-
-  <div class="grid">
-    <a class="card" href="#">CSE</a>
-    <a class="card" href="#">ECE</a>
-    <a class="card" href="#">EE</a>
-    <a class="card" href="#">ME</a>
-    <a class="card" href="#">CE</a>
-    <a class="card" href="#">IT</a>
-    <a class="card" href="#">AIML</a>
-    <a class="card" href="#">AI & DS</a>
-    <a class="card" href="#">Chemical</a>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Learn with<br><span>Mahindra Lodhi</span></h1>
+    <p>
+      Unlock your educational potential with professional guidance.  
+      Notes, PYQs & solutions for all B.Tech branches.
+    </p>
+    <a href="branches.html" class="btn">Get Started</a>
   </div>
-</main>
+
+  <div class="hero-img">
+    <img src="profile.jpg" alt="Mahindra Lodhi">
+  </div>
+</section>
+
+<section class="features">
+  <div class="card">Custom Coaching</div>
+  <div class="card">Exam Preparation</div>
+  <div class="card">Mentorship & Guidance</div>
+  <div class="card">Online Courses</div>
+</section>
 
 <footer>
   © 2026 Mahindra Lodhi
 </footer>
-
-<script>
-  document.getElementById("darkBtn").onclick = () => {
-    document.body.classList.toggle("dark");
-  };
-</script>
 
 </body>
 </html>
