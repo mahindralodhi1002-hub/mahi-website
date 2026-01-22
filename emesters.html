@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Semesters</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+const p = new URLSearchParams(location.search);
+const branch = p.get("branch");
+</script>
+
+<h2 id="title"></h2>
+
+<div class="grid" id="sem"></div>
+
+<script>
+document.getElementById("title").innerText = branch + " - Select Semester";
+for(let i=1;i<=8;i++){
+  document.getElementById("sem").innerHTML +=
+  `<a href="subjects.html?branch=${branch}&sem=${i}">Semester ${i}</a>`;
+}
+</script>
+
+</body>
+</html>

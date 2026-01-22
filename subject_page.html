@@ -1,53 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Subject</title>
+  <title>Download</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <a href="index.html">Home</a>
-</header>
+<script>
+const p = new URLSearchParams(location.search);
+const sub = p.get("sub");
+</script>
 
-<div class="container">
-  <div class="box">
-    <h2 id="sub"></h2>
-    <p>This page contains notes, previous year papers and solutions.</p>
-  </div>
+<h2 id="s"></h2>
 
-  <div class="box">
-    <h2>Last 5 Years Question Papers</h2>
-    <script>
-      const s = new URLSearchParams(location.search).get("subject");
-      document.getElementById("sub").innerText = s;
+<a class="btn" href="#">Download Notes (PDF)</a>
+<br><br>
+<a class="btn" href="#">Download PYQs</a>
 
-      for (let y = 2021; y <= 2025; y++) {
-        document.write(`
-          <div class="list">
-            <span>${y} Question Paper</span>
-            <a class="btn" href="#">Download</a>
-          </div>
-        `);
-      }
-    </script>
-  </div>
+<script>
+document.getElementById("s").innerText = sub;
+</script>
 
-  <div class="box">
-    <h2>Last 5 Years Solutions</h2>
-    <script>
-      for (let y = 2021; y <= 2025; y++) {
-        document.write(`
-          <div class="list">
-            <span>${y} Solution</span>
-            <a class="btn orange" href="#">Download</a>
-          </div>
-        `);
-      }
-    </script>
-  </div>
-</div>
-
-<footer>© 2026 Mahindra Lodhi</footer>
 </body>
 </html>
