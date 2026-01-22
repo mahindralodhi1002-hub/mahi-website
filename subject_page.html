@@ -1,44 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Subject PDFs</title>
+  <title>PDFs</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="nav">
-  <div class="logo">EDUCATION</div>
-</div>
+<div class="nav"><div class="logo">EDUCATION</div></div>
 
 <div class="container">
-  <h1 id="title"></h1>
-  <ul id="list"></ul>
+  <h1 id="t"></h1>
+  <ul id="l"></ul>
 </div>
 
 <footer>© 2026 Mahindra Lodhi</footer>
 
 <script>
-const p = new URLSearchParams(window.location.search);
-const branch = p.get("branch");
-const sem = p.get("sem");
-const subject = p.get("subject");
-
-document.getElementById("title").innerText =
-  `${branch} - Semester ${sem} - ${subject}`;
-
-const years = [2025, 2024, 2023];
-
-years.forEach(y => {
-  const li = document.createElement("li");
-  li.innerHTML = `${y}
-   <a href="pdfs/${branch}/sem${sem}/${subject}/${subject}${y}.pdf" download>
-    Download
-   </a>`;
-  document.getElementById("list").appendChild(li);
+const p=new URLSearchParams(location.search);
+const b=p.get("branch"),s=p.get("sem"),sub=p.get("subject");
+t.innerText=`${b} - Semester ${s} - ${sub}`;
+[2025,2024,2023,2022,2021].forEach(y=>{
+  l.innerHTML+=`<li>${y}
+  <a href="pdfs/${b}/sem${s}/${sub}/${sub}${y}.pdf" download>Download</a></li>`;
 });
 </script>
 
 </body>
 </html>
-
-
