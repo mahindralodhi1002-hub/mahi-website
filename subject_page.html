@@ -1,58 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Subject</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<a href="subjects.html">⬅ Back</a> |
-<a href="index.html">🏠 Home</a>
+<!-- NAV -->
+<div class="nav">
+  <div class="logo">EDUCATION</div>
+  <div>
+    <a href="subjects.html">⬅ Back</a> |
+    <a href="index.html">🏠 Home</a>
+  </div>
+</div>
 
-<h1 id="sub">Subject</h1>
+<!-- TITLE -->
+<h1 id="sub" style="text-align:center;margin-top:20px;">Subject</h1>
 
-<h2>Last 5 Years Question Papers</h2>
-<ul id="qp"></ul>
+<!-- QUESTION PAPERS -->
+<h2 style="text-align:center;">Last 5 Years Question Papers</h2>
+<ul id="qp" style="max-width:600px;margin:auto;"></ul>
 
-<h2>Last 5 Years Solutions</h2>
-<ul id="sol"></ul>
+<!-- SOLUTIONS -->
+<h2 style="text-align:center;margin-top:30px;">Last 5 Years Solutions</h2>
+<ul id="sol" style="max-width:600px;margin:auto;"></ul>
 
+<!-- SCRIPT -->
 <script>
 const p = new URLSearchParams(window.location.search);
-const branch = p.get("branch");
-const sem = p.get("sem");
+
+const branch  = p.get("branch");
+const sem     = p.get("sem");
 const subject = p.get("subject");
 
+// Title
 document.getElementById("sub").innerText =
-  branch + " - Semester " + sem + " - " + subject;
+  `${branch} - Semester ${sem} - ${subject}`;
 
-// YEARS
+// Years
 const years = [2025, 2024, 2023, 2022, 2020];
 
 // Question Papers
 const qpBox = document.getElementById("qp");
 years.forEach(y => {
   const li = document.createElement("li");
-  li.innerHTML = `${y} Question Paper 
+  li.innerHTML = `
+    ${y} Question Paper 
     <a href="pdfs/${branch}/sem${sem}/${subject}/${subject}${y}.pdf" download>
       Download
-    </a>`;
+    </a>
+  `;
   qpBox.appendChild(li);
 });
 
-// Solutions
+// Solutions (future ready)
 const solBox = document.getElementById("sol");
 years.forEach(y => {
   const li = document.createElement("li");
-  li.innerHTML = `${y} Solution 
+  li.innerHTML = `
+    ${y} Solution 
     <a href="pdfs/${branch}/sem${sem}/${subject}/${subject}${y}_solution.pdf" download>
       Download
-    </a>`;
+    </a>
+  `;
   solBox.appendChild(li);
 });
 </script>
 
-<footer>© 2026 Mahindra Lodhi</footer>
+<!-- FOOTER -->
+<footer style="text-align:center;margin-top:40px;">
+  © 2026 Mahindra Lodhi
+</footer>
 
 </body>
 </html>
