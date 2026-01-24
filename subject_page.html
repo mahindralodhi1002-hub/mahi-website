@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PDFs</title>
+  <title>Subject Papers</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="nav"><div class="logo">EDUCATION</div></div>
+<div class="nav">
+  <div class="logo">EDUCATION</div>
+  <a href="javascript:history.back()">Back</a>
+</div>
 
 <div class="container">
   <h1 id="t"></h1>
-  <ul id="l"></ul>
+  <ul id="list"></ul>
 </div>
 
 <footer>© 2026 Mahindra Lodhi</footer>
 
 <script>
-const p=new URLSearchParams(location.search);
-const b=p.get("branch"),s=p.get("sem"),sub=p.get("subject");
-t.innerText=`${b} - Semester ${s} - ${sub}`;
+const p = new URLSearchParams(location.search);
+const b = p.get("branch");
+const s = p.get("sem");
+const sub = p.get("subject");
+
+document.getElementById("t").innerText =
+  `${b} - Semester ${s} - ${sub}`;
+
 [2025,2024,2023,2022,2021].forEach(y=>{
-  l.innerHTML+=`<li>${y}
-  <a href="pdfs/${b}/sem${s}/${sub}/${sub}${y}.pdf" download>Download</a></li>`;
+  list.innerHTML += `
+    <li>${y}
+      <a href="pdfs/${b}/sem${s}/${sub}/${sub}${y}.pdf" download>
+        Download
+      </a>
+    </li>`;
 });
 </script>
 

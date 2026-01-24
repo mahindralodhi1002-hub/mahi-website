@@ -6,23 +6,31 @@
 </head>
 <body>
 
-<div class="nav"><div class="logo">EDUCATION</div></div>
+<div class="nav">
+  <div class="logo">EDUCATION</div>
+  <a href="javascript:history.back()">Back</a>
+</div>
 
 <div class="container">
   <h1 id="title"></h1>
   <div class="cards">
     <div class="card"><a id="s1">Semester 1</a></div>
     <div class="card"><a id="s2">Semester 2</a></div>
+    <div class="card"><a id="s3">Semester 3</a></div>
+    <div class="card"><a id="s4">Semester 4</a></div>
   </div>
 </div>
 
 <footer>© 2026 Mahindra Lodhi</footer>
 
 <script>
-const b=new URLSearchParams(location.search).get("branch");
-document.getElementById("title").innerText=b+" - Select Semester";
-s1.href="subjects.html?branch="+b+"&sem=1";
-s2.href="subjects.html?branch="+b+"&sem=2";
+const b = new URLSearchParams(location.search).get("branch");
+document.getElementById("title").innerText = b + " - Select Semester";
+
+s1.href = `subjects.html?branch=${b}&sem=1`;
+s2.href = `subjects.html?branch=${b}&sem=2`;
+s3.href = `subjects.html?branch=${b}&sem=3`;
+s4.href = `subjects.html?branch=${b}&sem=4`;
 </script>
 
 </body>

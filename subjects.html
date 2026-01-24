@@ -13,6 +13,7 @@
 
 <div class="container">
   <h1 id="title"></h1>
+
   <div class="cards">
     <div class="card"><a id="Math">Math</a></div>
     <div class="card"><a id="BME">BME</a></div>
@@ -25,13 +26,17 @@
 <footer>© 2026 Mahindra Lodhi</footer>
 
 <script>
-const p=new URLSearchParams(location.search);
-const b=p.get("branch"),s=p.get("sem");
-title.innerText=b+" - Semester "+s;
-["Math","BME","Physics","BCE","BCE'M"].forEach(x=>{
-  document.getElementById(x.replace("'","M")).href=
-  `subject_page.html?branch=${b}&sem=${s}&subject=${x}`;
-});
+const p = new URLSearchParams(location.search);
+const b = p.get("branch");
+const s = p.get("sem");
+
+document.getElementById("title").innerText = `${b} - Semester ${s}`;
+
+document.getElementById("Math").href    = `subject_page.html?branch=${b}&sem=${s}&subject=Math`;
+document.getElementById("BME").href     = `subject_page.html?branch=${b}&sem=${s}&subject=BME`;
+document.getElementById("Physics").href = `subject_page.html?branch=${b}&sem=${s}&subject=Physics`;
+document.getElementById("BCE").href     = `subject_page.html?branch=${b}&sem=${s}&subject=BCE`;
+document.getElementById("BCEM").href    = `subject_page.html?branch=${b}&sem=${s}&subject=BCE'M`;
 </script>
 
 </body>
